@@ -140,7 +140,8 @@ module Cielo
           DigitableLine: @digitable_line,
           Address: @address,
           ReturnInfo: @return_info&.as_json(options),
-          FraudAnalysis: @fraud_analysis&.as_json(options)
+          FraudAnalysis: @fraud_analysis&.as_json(options),
+          ExternalAuthentication: @external_authentication&.as_json(options)
         )
       end
     end
