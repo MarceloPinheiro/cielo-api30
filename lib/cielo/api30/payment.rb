@@ -139,7 +139,7 @@ module Cielo
           BarCodeNumber: @bar_code_number,
           DigitableLine: @digitable_line,
           Address: @address,
-          ExternalAuthentication: @external_authentication.as_json,
+          ExternalAuthentication: @external_authentication&.as_json(options),
           ReturnInfo: @return_info&.as_json(options),
           FraudAnalysis: @fraud_analysis&.as_json(options)
         )
