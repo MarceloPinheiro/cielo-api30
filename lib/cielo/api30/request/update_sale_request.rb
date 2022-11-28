@@ -7,14 +7,16 @@ module Cielo
         attr_accessor :environment,
                       :type,
                       :service_tax_amount,
-                      :amount
+                      :amount,
+                      :mode
 
         private :environment, :type
 
-        def initialize(type, merchant, environment)
+        def initialize(type, merchant, environment, mode)
           super(merchant)
           @environment = environment
           @type = type
+          @mode = mode
         end
 
         def execute(payment_id, mode: 'cielo')
