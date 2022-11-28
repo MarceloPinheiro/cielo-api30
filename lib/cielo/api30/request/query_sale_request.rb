@@ -12,8 +12,8 @@ module Cielo
           @environment = environment
         end
 
-        def execute(payment_id)
-          uri = URI.parse([@environment.api_query, "1", "sales", payment_id].join("/"))
+        def execute(payment_id, mode: 'cielo')
+          uri = URI.parse(mode == 'cielo' ? [@environment.api_query, "1", "sales", payment_id].join("/") : [@environment.braspag_api_query, "v2", "sales", payment_id].join("/"))
           Cielo::API30::Sale.from_json(send_request("GET", uri))
         end
       end

@@ -17,8 +17,8 @@ module Cielo
           @type = type
         end
 
-        def execute(payment_id)
-          uri = URI.parse([@environment.api, "1", "sales", payment_id, type].join("/"))
+        def execute(payment_id, mode: 'cielo')
+          uri = URI.parse(mode == 'cielo' ? [@environment.api, "1", "sales", payment_id, type].join("/") : [@environment.braspag_api, "v2", "sales", payment_id, type].join("/"))
           params = {}
 
           params["amount"] = amount if amount
