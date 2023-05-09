@@ -31,7 +31,7 @@ Gem::Specification.new do |spec|
                 "lib/cielo/api30/request/query_sale_request.rb",
                 "lib/cielo/api30/request/update_sale_request.rb"]
 
-  spec.add_dependency "bundler", "~> 2.4"
+  spec.add_dependency "bundler"
   spec.add_dependency "uuidtools"
   spec.add_development_dependency "yard"
   spec.add_development_dependency "rspec"
