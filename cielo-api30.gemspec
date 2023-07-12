@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
   spec.has_rdoc      = 'yard'
 
-  spec.required_ruby_version = '>= 3.0.0'
+  spec.required_ruby_version = '>= 2.5.2'
   spec.require_paths = ['lib']
   spec.files = ["lib/cielo/api30.rb",
                 "lib/cielo/environment.rb",
